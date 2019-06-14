@@ -201,7 +201,6 @@ def big_shoe_rebounds
         end
     end
     return number_of_rebounds
-
 end
 
 

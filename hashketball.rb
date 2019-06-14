@@ -194,7 +194,7 @@ def big_shoe_rebounds
 
     game_hash.each do |location, team_data|
         team_data[:players].each do |player|
-            if largest_shoe == nil || player[:shoe] > largest_size
+            if largest_shoe == nil || player[:shoe] > largest_shoe
                 largest_shoe = player[:shoe]
                 number_of_rebounds = player [:rebounds]
             end

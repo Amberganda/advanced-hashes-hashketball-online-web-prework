@@ -158,15 +158,23 @@ end
 
 def team_names
     [game_hash[:home][:team_name], game_hash[:away][:team_name]]
-
 end
 
+def player_numbers(team_name)
+    player_numbers = [] 
+    game_hash.each do |location, team_data|
+        
+        if team_name == team_data[:team_name]
 
-#     game_hash.each do |location, team_name|
-#         team_data[]
-#     end
+            team_data[:players].each do |player|
+                player_numbers << player[:number]
+            end
+        end
+    end
 
-    # game_hash[:home][:team_name]
+    player_numbers
+
+end
 
 #end
 

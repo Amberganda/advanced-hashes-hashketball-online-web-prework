@@ -176,9 +176,19 @@ def player_numbers(team_name)
 
 end
 
-#end
+def player_stats(player_name)
 
-#return team_name
+    game_hash.each do |location, team_data|
+        team_data[:players].each do |player|
+            if player_name == player[:name]
+                player
+            end
+        end
+
+    end
+
+end
+
 
 # def good_practices
 #   game_hash.each do |location, team_data|

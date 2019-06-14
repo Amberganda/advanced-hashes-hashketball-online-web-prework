@@ -188,6 +188,22 @@ def player_stats(player_name)
     end
 end
 
+def big_shoe_rebounds
+    largest_shoe = nil
+    largest_size = nil
+
+    game_hash.each do |location, team_data|
+        team_data[:players].each do |player|
+            if largest_shoe == nil || team_data > largest_size
+                largest_shoe = team_data
+                largest_size = location
+            end
+
+        end
+    end
+
+end
+
 
 # def good_practices
 #   game_hash.each do |location, team_data|
